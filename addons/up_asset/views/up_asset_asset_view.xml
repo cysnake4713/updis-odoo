@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_up_asset_asset_form" model="ir.ui.view">
+            <field name="name">updis.asset.asset.form</field>
+            <field name="model">updis.asset.asset</field>
+            <field name="arch" type="xml">
+                <form string="Asset" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" placeholder="Code"/>
+                                <field name="name" placeholder="Name"/>
+                            </group>
+                            <group>
+                                <field name="category_id" widget="selection"/>
+                                <field name="model_and_type"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Info">
+                                <group>
+                                    <group string="Code Info">
+                                        <field name="financial_code"/>
+                                    </group>
+                                    <group string="Location Info">
+                                        <field name="department_id"/>
+                                        <field name="location"/>
+                                        <field name="user"
+                                               attrs="{'invisible':[('category_id','!=',%(up_asset_category_computer)d)]}"/>
+                                    </group>
+                                    <div>
+                                        <group string="Supplier"
+                                               attrs="{'invisible':[('category_id','!=',%(up_asset_category_software)d)]}">
+                                            <field name="supplier"
+                                                   context="{'default_customer': 0, 'search_default_supplier': 1, 'default_supplier': 1}"
+                                                   domain="[('supplier', '=', True)]"/>
+                                        </group>
+                                        <group string="Usage Info"
+                                               attrs="{'invisible':[('category_id','=',%(up_asset_category_software)d)]}">
+                                            <field name="usage"/>
+                                            <field name="scrap_result" attrs="{'invisible':[('usage','!=','scrap')]}"/>
+                                            <field name="scrap_note" attrs="{'invisible':[('usage','!=','scrap')]}"/>
+                                        </group>
+                                    </div>
+                                    <group string="Life Cycle Info">
+                                        <field name="purchase_date"/>
+                                        <field name="life_cycle"/>
+                                    </group>
+                                    <group string="Price Info">
+                                        <field name="quantity"/>
+                                        <field name="unit_price" string="Unit Price(yuan)"/>
+                                        <field name="cost" string="Cost(yuan)"
+                                               attrs="{'invisible':[('category_id','=',%(up_asset_category_software)d)]}"/>
+                                    </group>
+                                </group>
+                                <label for="note" string="Maintenance Note"/>
+                                <field name="note" no_label="1"/>
+                                <group col="4">
+                                    <field name="create_uid" readonly="1"/>
+                                    <field name="create_date" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                               help="Follow this project to automatically track the events of this project."
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_up_asset_asset_tree" model="ir.ui.view">
+            <field name="name">updis.asset.asset.tree</field>
+            <field name="model">updis.asset.asset</field>
+            <field name="arch" type="xml">
+                <tree string="Asset" version="7.0">
+                    <field name="category_id"/>
+                    <field name="code"/>
+                    <field name="financial_code"/>
+                    <field name="name"/>
+                    <field name="model_and_type"/>
+                    <field name="department_id"/>
+                    <field name="user"/>
+                    <field name="usage"/>
+                    <field name="create_date"/>
+                    <field name="purchase_date"/>
+                    <field name="location"/>
+                    <field name="unit_price"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_up_asset_asset_search" model="ir.ui.view">
+            <field name="name">updis.asset.asset.search</field>
+            <field name="model">updis.asset.asset</field>
+            <field name="arch" type="xml">
+                <search string="Asset Search View">
+                    <field name="category_id"/>
+                    <field name="code"/>
+                    <field name="financial_code"/>
+                    <field name="name"/>
+                    <field name="model_and_type"/>
+                    <field name="department_id"/>
+                    <field name="user"/>
+                    <field name="usage"/>
+                    <field name="create_date"/>
+                    <field name="purchase_date"/>
+                    <field name="location"/>
+                    <field name="unit_price"/>
+                    <filter name="only-active" string="Active Asset" domain="[('usage','not in',['scrap'])]"/>
+                    <filter name="only-scrap" string="Scrap Asset" domain="[('usage','in',['scrap'])]"/>
+                    <group expand="0" string="Group by...">
+                        <filter name="by-category" string="By Category" domain="[]"
+                                context="{'group_by':'category_id'}"/>
+                        <filter name="by-usage" string="By Usage" domain="[]"
+                                context="{'group_by':'usage'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>
