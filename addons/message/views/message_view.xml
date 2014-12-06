@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_message_message_form" model="ir.ui.view">
+            <field name="name">message.message.tree</field>
+            <field name="model">message.message</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="category_id"/>
+                    </group>
+                    <field name="content" widget="html"/>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

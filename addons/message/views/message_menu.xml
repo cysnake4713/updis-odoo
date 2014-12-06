@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_message_message_all" model="ir.actions.act_window">
+            <field name="name">所有信息</field>
+            <field name="res_model">message.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+        <record id="action_message_category" model="ir.actions.act_window">
+            <field name="name">信息分类</field>
+            <field name="res_model">message.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="menuitem_message_root" name="信息" sequence="12"/>
+        <menuitem id="menuitem_message_management" name="信息管理" parent="menuitem_message_root" sequence="10"/>
+        <menuitem id="menuitem_message_message_all" name="所有信息" parent="menuitem_message_management" sequence="10"
+                  action="action_message_message_all"/>
+
+        <menuitem id="menuitem_message_setting" name="设置" parent="menuitem_message_root" sequence="50"/>
+        <menuitem id="menuitem_message_category" name="分类" parent="menuitem_message_setting" sequence="10"
+                  action="action_message_category"/>
+    </data>
+</openerp>

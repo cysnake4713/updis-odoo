@@ -20,8 +20,5 @@ UPDIS Asset Management Module.""",
 
 
     ],
-    'demo': [],
-    'test': [],
-    'installable': True,
-    'auto_install': False,
+    'application': True,
 }
