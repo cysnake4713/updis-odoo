@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_up_project_all" model="ir.actions.act_window">
+            <field name="name">所有项目</field>
+            <field name="res_model">up.project.project</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="target">current</field>
+        </record>
+        <menuitem id="menuitem_up_project_root" name="项目管理" sequence="10"/>
+        <menuitem id="menuitem_up_project_info" name="项目" parent="menuitem_up_project_root" sequence="5"/>
+        <menuitem id="menuitem_up_project_all" name="所有项目" parent="menuitem_up_project_info" sequence="5"
+                action="action_up_project_all"/>
+    </data>
+</openerp>
