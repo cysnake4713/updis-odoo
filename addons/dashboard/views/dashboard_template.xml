@@ -1,226 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <template id="dashboard.assets_frontend" name="Website assets">
-            <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
-            <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
-            <!--<link href="/dashboard/static/src/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
-            <link href="/dashboard/static/src/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
-            <link href="/dashboard/static/src/media/css/style.css" rel="stylesheet" type="text/css"/>
-            <link href="/dashboard/static/src/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-            <link href="/dashboard/static/src/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-            <link href="/dashboard/static/src/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-            <!--&lt;!&ndash; END GLOBAL MANDATORY STYLES &ndash;&gt;-->
-            <!--&lt;!&ndash; BEGIN PAGE LEVEL STYLES &ndash;&gt;-->
-            <!--&lt;!&ndash;<link href="/dashboard/static/src/media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
-            <!--<link href="/dashboard/static/src/media/css/daterangepicker.css" rel="stylesheet" type="text/css"/>-->
-            <!--<link href="/dashboard/static/src/media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>-->
-            <!--<link href="/dashboard/static/src/media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>-->
-            <!--<link href="/dashboard/static/src/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>-->
-            <!--&lt;!&ndash; END PAGE LEVEL STYLES &ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"/>-->
-            <!--&lt;!&ndash; IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip &ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/bootstrap.min.js" type="text/javascript"/>-->
-            <!--&lt;!&ndash;[if lt IE 9]>-->
-            <!--<script src="/dashboard/static/src/media/js/excanvas.min.js"></script>-->
-            <!--<script src="/dashboard/static/src/media/js/respond.min.js"></script>-->
-            <!--<![endif]&ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.slimscroll.min.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.cookie.min.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.uniform.min.js" type="text/javascript"/>-->
-            <!--&lt;!&ndash; END CORE PLUGINS &ndash;&gt;-->
-            <!--&lt;!&ndash; BEGIN PAGE LEVEL PLUGINS &ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.russia.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.world.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.europe.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.germany.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.usa.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.vmap.sampledata.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.flot.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.flot.resize.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.pulsate.min.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/date.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/daterangepicker.js" type="text/javascript"/>-->
-            <!--&lt;!&ndash;<script src="/dashboard/static/src/media/js/jquery.gritter.js" type="text/javascript"/>&ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/fullcalendar.min.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.easy-pie-chart.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/jquery.sparkline.min.js" type="text/javascript"/>-->
-            <!--&lt;!&ndash; END PAGE LEVEL PLUGINS &ndash;&gt;-->
-            <!--&lt;!&ndash; BEGIN PAGE LEVEL SCRIPTS &ndash;&gt;-->
-            <!--<script src="/dashboard/static/src/media/js/app.js" type="text/javascript"/>-->
-            <!--<script src="/dashboard/static/src/media/js/index.js" type="text/javascript"/>-->
-            <!--<script type="text/javascript">-->
-            <!--jQuery(document).ready(function() {-->
-            <!--App.init(); // initlayout and core plugins-->
-            <!--Index.init();-->
-            <!--Index.initJQVMAP(); // init index page's custom scripts-->
-            <!--Index.initCalendar(); // init index page's custom scripts-->
-            <!--Index.initCharts(); // init index page's custom scripts-->
-            <!--Index.initChat();-->
-            <!--Index.initMiniCharts();-->
-            <!--Index.initDashboardDaterange();-->
-            <!--Index.initIntro();-->
-            <!--});-->
-            <!--</script>-->
-            <!--&lt;!&ndash; END JAVASCRIPTS &ndash;&gt;-->
-            <!--<script type="text/javascript">var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-37564768-1']); _gaq.push(['_setDomainName',-->
-            <!--'keenthemes.com']); _gaq.push(['_setAllowLinker', true]); _gaq.push(['_trackPageview']); (function() { var ga =-->
-            <!--document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' ==-->
-            <!--document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js'; var s =-->
-            <!--document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();-->
-            <!--</script>-->
+        <template id="dashboard.sidebar" name="Dashboard Sidebar">
+
         </template>
 
-        <template id="dashboard.layout" name="Dashboard layout">&lt;!DOCTYPE html&gt;
-            <html t-att-lang="lang and lang.replace('_', '-')"
-                  t-att-data-website-id="website.id if editable and website else None"
-                  t-att-data-editable="'1' if editable else None"
-                  t-att-data-translatable="'1' if translatable else None"
-                  t-att-data-view-xmlid="xmlid if editable else None"
-                  t-att-data-main-object="repr(main_object) if editable else None"
-                  t-att-data-oe-company-name="res_company.name">
-                <head>
-                    <meta charset="utf-8"/>
-                    <t t-if="main_object and 'website_meta_title' in main_object and not title">
-                        <t t-set="title" t-value="main_object.website_meta_title"/>
-                    </t>
-                    <t t-if="main_object and 'name' in main_object and not title and not additional_title">
-                        <t t-set="additional_title" t-value="main_object.name"/>
-                    </t>
-                    <t t-if="not title">
-                        <t t-set="title">
-                            <t t-if="additional_title">
-                                <t t-raw="additional_title"/>
-                                |
-                            </t>
-                            <t t-esc="(website or res_company).name"/>
-                        </t>
-                    </t>
-                    <meta name="viewport" content="initial-scale=1"/>
-                    <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object
-                and main_object.website_meta_description or website_meta_description"/>
-                    <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object
-                and main_object.website_meta_keywords or website_meta_keywords"/>
-                    <title>
-                        <t t-esc="title"/>
-                    </title>
-                    <t t-set="languages" t-value="website.get_languages() if website else None"/>
-                    <t t-if="request and request.website_multilang and website">
-                        <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lang">
-                            <link rel="alternate" t-att-hreflang="lang['hreflang']" t-att-href="lang['href']"/>
-                        </t>
-                    </t>
-                    <t t-call-assets="web.assets_common" t-js="false"/>
-                    <t t-call-assets="website.assets_frontend" t-js="false"/>
-                    <t t-call-assets="dashboard.assets_frontend" t-js="false"/>
-                    <t t-raw="head or ''" name='layout_head'/>
-                </head>
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website assets">
+            <xpath expr="/t" position="inside">
+                <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+                <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
+                <!--<link href="/dashboard/static/src/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
+                <link href="/dashboard/static/src/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+                <link href="/dashboard/static/src/media/css/style.css" rel="stylesheet" type="text/css"/>
+                <link href="/dashboard/static/src/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+                <link href="/dashboard/static/src/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+                <link href="/dashboard/static/src/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
-                <!-- END HEAD -->
-                <!-- BEGIN BODY -->
-                <body class="page-header-fixed">
-                    <!-- BEGIN CONTAINER -->
-                    <div class="page-container">
-                        <!-- BEGIN SIDEBAR -->
-                        <div class="page-sidebar nav-collapse collapse">
-                            <!-- BEGIN SIDEBAR MENU -->
-                            <ul class="page-sidebar-menu">
-                                <li>
-                                    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-                                    <div class="sidebar-toggler hidden-phone"/>
-                                    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-                                </li>
-                                <li>
-                                    <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-                                    <form class="sidebar-search">
-                                        <div class="input-box">
-                                            <a href="javascript:" class="remove"/>
-                                            <input type="text" placeholder="搜索..."/>
-                                            <input type="button" class="submit" value=" "/>
-                                        </div>
-                                    </form>
-                                    <!-- END RESPONSIVE QUICK SEARCH FORM -->
-                                </li>
-                                <div class="sidebar-holder"/>
-                            </ul>
-                            <!-- END SIDEBAR MENU -->
-                        </div>
-                        <!-- END SIDEBAR -->
-                        <!-- BEGIN PAGE -->
-                        <div class="page-content">
-                            <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-                            <div id="portlet-config" class="modal hide">
-                                <div class="modal-header">
-                                    <button data-dismiss="modal" class="close" type="button"/>
-                                    <h3>Widget Settings</h3>
-                                </div>
-                                <div class="modal-body">
-                                    Widget settings form goes here
-                                </div>
-                            </div>
-                            <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-                            <!-- BEGIN PAGE CONTAINER-->
-                            <div class="container-fluid">
-                                <div class="row-fluid">
-                                    <div class="span12">
-                                        <!-- BEGIN STYLE CUSTOMIZER -->
-                                        <!-- END BEGIN STYLE CUSTOMIZER -->
-                                        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
-                                        <h3 class="page-title">
-                                            <t t-raw="page_title"/>
-                                            <!--<small>statistics and more</small>-->
-                                        </h3>
-                                        <ul class="breadcrumb">
-                                            <t t-raw="breadcrumb"/>
-                                        </ul>
-                                        <!-- END PAGE TITLE & BREADCRUMB-->
+                <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+                <!-- BEGIN CORE PLUGINS -->
+                <!--<script src="/dashboard/static/src/media/js/jquery-1.10.1.min.js" type="text/javascript"/>-->
+                <script src="/dashboard/static/src/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"/>
+                <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+                <script src="/dashboard/static/src/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"/>
+                <!--<script src="/dashboard/static/src/media/js/bootstrap.min.js" type="text/javascript"/>-->
+                <!--[if lt IE 9]>
+                <script src="/dashboard/static/src/media/js/excanvas.min.js"></script>
+                <script src="/dashboard/static/src/media/js/respond.min.js"></script>
+                <![endif]-->
+                <script src="/dashboard/static/src/media/js/jquery.slimscroll.min.js" type="text/javascript"/>
+                <!--<script src="/dashboard/static/src/media/js/jquery.blockui.min.js" type="text/javascript"/>-->
+                <script src="/dashboard/static/src/media/js/jquery.cookie.min.js" type="text/javascript"/>
+                <script src="/dashboard/static/src/media/js/jquery.uniform.min.js" type="text/javascript"/>
+                <!-- END CORE PLUGINS -->
+                <script src="/dashboard/static/src/media/js/app.js"/>
+                <script>
+                    jQuery(document).ready(function() {
+                        App.init();
+                    });
+                </script>
+                <!-- END JAVASCRIPTS -->
+            </xpath>
+        </template>
+
+        <template id="dashboard.index" name="Dashboard Index">
+            <t t-call="website.layout">
+                <!-- BEGIN CONTAINER -->
+                <div class="page-container row-fluid">
+                    <!-- BEGIN SIDEBAR -->
+                    <div class="page-sidebar nav-collapse">
+                        <!-- BEGIN SIDEBAR MENU -->
+                        <ul class="page-sidebar-menu">
+                            <li>
+                                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                                <div class="sidebar-toggler hidden-phone"/>
+                                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            </li>
+                            <li>
+                                <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                                <form class="sidebar-search">
+                                    <div class="input-box">
+                                        <a href="javascript:" class="remove"/>
+                                        <input type="text" placeholder="搜索..."/>
+                                        <input type="button" class="submit" value=" "/>
                                     </div>
-                                </div>
-                                <div id="dashboard">
-                                    <t t-raw="page_container"/>
+                                </form>
+                                <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                            </li>
+                            <t t-call="dashboard.sidebar"/>
+                        </ul>
+                        <!-- END SIDEBAR MENU -->
+                    </div>
+                    <!-- END SIDEBAR -->
+                    <!-- BEGIN PAGE -->
+                    <div class="page-content">
+                        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                        <div id="portlet-config" class="modal hide">
+                            <div class="modal-header">
+                                <button data-dismiss="modal" class="close" type="button"/>
+                                <h3>Widget Settings</h3>
+                            </div>
+                            <div class="modal-body">
+                                Widget settings form goes here
+                            </div>
+                        </div>
+                        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                        <!-- BEGIN PAGE CONTAINER-->
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <!-- BEGIN STYLE CUSTOMIZER -->
+                                    <!-- END BEGIN STYLE CUSTOMIZER -->
+                                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                                    <h3 class="page-title">
+                                        <t t-raw="page_title"/>
+                                        <!--<small>statistics and more</small>-->
+                                    </h3>
+                                    <ul class="breadcrumb">
+                                        <t t-raw="breadcrumb"/>
+                                    </ul>
+                                    <!-- END PAGE TITLE & BREADCRUMB-->
                                 </div>
                             </div>
-                            <!-- END PAGE CONTAINER-->
+                            <div id="dashboard">
+                                <t t-raw="page_container"/>
+                            </div>
                         </div>
-                        <!-- END PAGE -->
+                        <!-- END PAGE CONTAINER-->
                     </div>
-                    <!-- END CONTAINER -->
-                    <!-- BEGIN FOOTER -->
-                    <div class="footer">
-                        <div class="footer-inner">
-                        </div>
-                        <div class="footer-tools">
-                            <span class="go-top">
-                                <i class="icon-angle-up"/>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- END PAGE LEVEL SCRIPTS -->
-                    <t t-call-assets="web.assets_common" t-css="false"/>
-                    <t t-call-assets="website.assets_frontend" t-css="false"/>
-                    <t t-call-assets="dashboard.assets_frontend" t-css="false"/>
-                </body>
-                <!-- END BODY -->
-            </html>
-        </template>
-
-        <template id="editor_head" inherit_id="dashboard.layout" name="Editor" groups="base.group_website_publisher,base.group_website_designer">
-            <xpath expr='//t[@t-call-assets="dashboard.assets_frontend"][@t-js]' position="after">
-                <t t-call-assets="website.assets_editor" t-js="false"/>
-            </xpath>
-            <xpath expr='//t[@t-call-assets="dashboard.assets_frontend"][@t-css]' position="after">
-                <t t-call-assets="website.assets_editor" t-css="false"/>
-            </xpath>
-        </template>
-
-
-        <template id="dashboard.home" name="Dashboard Index" page="True">
-            <t t-call="dashboard.layout">
-                <div class="oe_container">
-
+                    <!-- END PAGE -->
                 </div>
+                <!-- END CONTAINER -->
             </t>
         </template>
 

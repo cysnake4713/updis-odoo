@@ -332,6 +332,10 @@ Header and header elements.
   margin: 0 !important;
 }
 
+ .navbar {
+  min-height: 34px !important;
+}
+
 .header.navbar-fixed-top {
   z-index: 1000 !important;
 }
@@ -371,7 +375,7 @@ Header and header elements.
   border: 0px;
   padding: 0px; 
   box-shadow: none;
-  height: 42px; 
+  height: 42px;
 }
 
 .header .nav {
@@ -466,7 +470,7 @@ Page container
 }
 
 .page-header-fixed .page-container {
-  margin-top: 42px;  
+  margin-top: 34px;
 }
 
 /***
