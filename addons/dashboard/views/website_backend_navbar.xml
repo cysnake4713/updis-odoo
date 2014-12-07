@@ -3,7 +3,7 @@
     <data>
         <!-- Front-end/Back-end integration -->
         <template id="user_navbar" inherit_id="dashboard.layout" groups="base.group_user">
-            <xpath expr="//div[@id='top_navigation']" position="before">
+            <xpath expr="//div[@class='page-container']" position="before">
                 <t t-if="website and menu_data">
                     <div class="header navbar navbar-inverse navbar-fixed-top">
                         <div class="container-fluid">

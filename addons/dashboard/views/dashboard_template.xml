@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <template id="dashboard.menu_link">
-            <t t-set="debug_param" t-value="'?&amp;debug=' if debug else ''"/>
-            <a t-att-href="'/web%s#menu_id=%s&amp;action=%s' % (debug_param, menu['id'], menu['action'] and menu['action'].split(',')[1] or '')"
-               t-att-data-menu="menu['id']"
-               t-att-data-action-model="menu['action'] and menu['action'].split(',')[0] or ''"
-               t-att-data-action-id="menu['action'] and menu['action'].split(',')[1] or ''">
-                <t t-esc="menu['name']"/>
-            </a>
-        </template>
-
         <template id="dashboard.assets_frontend" name="Website assets">
             <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
             <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
@@ -131,30 +121,6 @@
                 <!-- END HEAD -->
                 <!-- BEGIN BODY -->
                 <body class="page-header-fixed">
-                    <!-- BEGIN HEADER -->
-                    <div class="header navbar navbar-inverse navbar-fixed-top">
-                        <!-- BEGIN TOP NAVIGATION BAR -->
-                        <div class="navbar-inner" id="top_navigation">
-                            <div class="container-fluid">
-                                <!-- BEGIN LOGO -->
-                                <a class="brand" href="/">
-                                    <img t-attf-src="/logo.png" style="height:20px"/>
-                                </a>
-                                <!-- END LOGO -->
-                                <!-- BEGIN HORIZANTAL MENU -->
-                                <div class="navbar hor-menu hidden-phone hidden-tablet">
-                                    <div class="navbar-inner">
-                                        <ul class="nav" id="dashboard_menu">
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="nav pull-right" id="dashboard_edit"/>
-                            </div>
-                            <!-- END TOP NAVIGATION BAR -->
-                        </div>
-
-                    </div>
-                    <!-- END HEADER -->
                     <!-- BEGIN CONTAINER -->
                     <div class="page-container">
                         <!-- BEGIN SIDEBAR -->
@@ -252,6 +218,9 @@
 
         <template id="dashboard.home" name="Dashboard Index" page="True">
             <t t-call="dashboard.layout">
+                <div class="oe_container">
+
+                </div>
             </t>
         </template>
 
