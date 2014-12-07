@@ -1,50 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+        <template id="edit_bottom" inherit_id="website.layout" name="Inherit website" >
+            <xpath expr='//t[@t-call-assets="website.assets_frontend"][@t-css]' position="after">
+                 <t t-raw="bottom or ''" name='layout_bottom'/>
+            </xpath>
+        </template>
+
         <template id="dashboard.sidebar" name="Dashboard Sidebar">
 
         </template>
 
-        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website assets">
-            <xpath expr="/t" position="inside">
-                <link href="/dashboard/static/src/css/style.css" rel="stylesheet" type="text/css"/>
-                <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
-                <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
-                <!--<link href="/dashboard/static/src/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
-                <link href="/dashboard/static/src/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
-                <link href="/dashboard/static/src/media/css/style.css" rel="stylesheet" type="text/css"/>
-                <link href="/dashboard/static/src/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-                <link href="/dashboard/static/src/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-                <link href="/dashboard/static/src/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+        <template id="dashboard.assets_frontend" name="Website assets">
+            <link href="/dashboard/static/src/css/style.css" rel="stylesheet" type="text/css"/>
+            <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+            <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
+            <!--<link href="/dashboard/static/src/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
+            <link href="/dashboard/static/src/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+            <link href="/dashboard/static/src/media/css/style.css" rel="stylesheet" type="text/css"/>
+            <link href="/dashboard/static/src/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+            <link href="/dashboard/static/src/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+            <link href="/dashboard/static/src/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
-                <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-                <!-- BEGIN CORE PLUGINS -->
-                <!--<script src="/dashboard/static/src/media/js/jquery-1.10.1.min.js" type="text/javascript"/>-->
-                <script src="/dashboard/static/src/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"/>
-                <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-                <script src="/dashboard/static/src/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"/>
-                <!--<script src="/dashboard/static/src/media/js/bootstrap.min.js" type="text/javascript"/>-->
-                <!--[if lt IE 9]>
-                <script src="/dashboard/static/src/media/js/excanvas.min.js"></script>
-                <script src="/dashboard/static/src/media/js/respond.min.js"></script>
-                <![endif]-->
-                <script src="/dashboard/static/src/media/js/jquery.slimscroll.min.js" type="text/javascript"/>
-                <!--<script src="/dashboard/static/src/media/js/jquery.blockui.min.js" type="text/javascript"/>-->
-                <script src="/dashboard/static/src/media/js/jquery.cookie.min.js" type="text/javascript"/>
-                <script src="/dashboard/static/src/media/js/jquery.uniform.min.js" type="text/javascript"/>
-                <!-- END CORE PLUGINS -->
-                <script src="/dashboard/static/src/media/js/app.js"/>
-                <script>
-                    jQuery(document).ready(function() {
-                        App.init();
-                    });
-                </script>
-                <!-- END JAVASCRIPTS -->
-            </xpath>
+            <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+            <!-- BEGIN CORE PLUGINS -->
+            <!--<script src="/dashboard/static/src/media/js/jquery-1.10.1.min.js" type="text/javascript"/>-->
+            <script src="/dashboard/static/src/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"/>
+            <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+            <script src="/dashboard/static/src/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"/>
+            <!--<script src="/dashboard/static/src/media/js/bootstrap.min.js" type="text/javascript"/>-->
+            <!--[if lt IE 9]>
+            <script src="/dashboard/static/src/media/js/excanvas.min.js"></script>
+            <script src="/dashboard/static/src/media/js/respond.min.js"></script>
+            <![endif]-->
+            <script src="/dashboard/static/src/media/js/jquery.slimscroll.min.js" type="text/javascript"/>
+            <!--<script src="/dashboard/static/src/media/js/jquery.blockui.min.js" type="text/javascript"/>-->
+            <script src="/dashboard/static/src/media/js/jquery.cookie.min.js" type="text/javascript"/>
+            <script src="/dashboard/static/src/media/js/jquery.uniform.min.js" type="text/javascript"/>
+            <!-- END CORE PLUGINS -->
+            <script src="/dashboard/static/src/media/js/app.js"/>
+            <script>
+                jQuery(document).ready(function() {
+                App.init();
+                });
+            </script>
+            <!-- END JAVASCRIPTS -->
         </template>
 
         <template id="dashboard.index" name="Dashboard Index">
             <t t-call="website.layout">
+                <t t-set="head">
+                    <t t-call-assets="dashboard.assets_frontend" t-js="false"/>
+                </t>
+                <t t-set="bottom">
+                    <t t-call-assets="dashboard.assets_frontend" t-css="false"/>
+                </t>
+
                 <!-- BEGIN CONTAINER -->
                 <div class="page-container row-fluid">
                     <!-- BEGIN SIDEBAR -->
