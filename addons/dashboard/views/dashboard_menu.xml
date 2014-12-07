@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_dashboard_root" model="ir.actions.act_url">
+            <field name="name">看板</field>
+            <field name="target">self</field>
+            <field name="url">/dashboard/index</field>
+        </record>
+        <menuitem id="menuitem_dashboard_root" name="看板" action="action_dashboard_root" sequence="1000"/>
+    </data>
+</openerp>
