@@ -7,6 +7,7 @@
 
         <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website assets">
             <xpath expr="/t" position="inside">
+                <link href="/dashboard/static/src/css/style.css" rel="stylesheet" type="text/css"/>
                 <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
                 <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
                 <!--<link href="/dashboard/static/src/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
