@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="dashboard.common.table.sub">
+        <t t-foreach="fields" t-as="field">
+            <td><a t-attf-href="/dashboard/message/detail/#{fields.id}"><t t-esc="field_value"/></a></td>
+        </t>
+    </t>
+
+    <t t-name="dashboard.common.table">
+        <table class="table table-hover">
+            <tr t-foreach="widget" t-as="item">
+                <t t-call="dashboard.common.table.sub">
+                    <t t-set="fields" t-value="item_value"/>
+                </t>
+            </tr>
+        </table>
+    </t>
+</templates>

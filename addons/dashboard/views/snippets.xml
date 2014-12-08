@@ -17,12 +17,12 @@
 
                         <section class="oe_snippet_body mt16 mb16">
                             <div class="row">
-                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-fields="" data-limit="" data-order="">
                                     <!-- BEGIN Portlet PORTLET-->
                                     <div class="portlet box red">
                                         <div class="portlet-title">
                                             <div class="caption">
-                                                <i class="icon-reorder"></i>
+                                                <i class="icon-reorder"/>
                                             </div>
                                             <div class="actions">
                                             </div>
@@ -34,12 +34,12 @@
                                     </div>
                                 </div>
                                 <!-- END Portlet PORTLET-->
-                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-fields="" data-limit="" data-order="">
                                     <!-- BEGIN Portlet PORTLET-->
                                     <div class="portlet box grey">
                                         <div class="portlet-title">
                                             <div class="caption">
-                                                <i class="icon-reorder"></i>
+                                                <i class="icon-reorder"/>
                                             </div>
                                             <div class="actions">
                                             </div>
@@ -51,12 +51,12 @@
                                     </div>
                                     <!-- END Portlet PORTLET-->
                                 </div>
-                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-fields="" data-limit="" data-order="">
                                     <!-- BEGIN Portlet PORTLET-->
                                     <div class="portlet box blue">
                                         <div class="portlet-title">
                                             <div class="caption">
-                                                <i class="icon-reorder"></i>
+                                                <i class="icon-reorder"/>
                                             </div>
                                             <div class="actions">
                                             </div>

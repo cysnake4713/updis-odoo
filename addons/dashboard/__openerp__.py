@@ -14,6 +14,9 @@ UPDIS Project Module.""",
         'views/dashboard_template.xml',
         'views/snippets.xml',
     ],
+    'qweb': [
+        'static/src/xml/data.xml',
+    ],
     'application': True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

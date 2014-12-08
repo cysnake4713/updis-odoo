@@ -3,18 +3,17 @@
     <data>
         <template id="message_dashboard_sidebar" inherit_id="dashboard.sidebar" name="Message Dashboard Sidebar" customize_show="False">
             <xpath expr="." position="inside">
-                <li class="start active">
-                    <a href="javascript:;">
+                <li class="">
+                    <a href="/dashboard/message">
                         <i class="icon-home"></i>
                         <span class="title">院内信息</span>
-                        <span class="selected"></span>
                     </a>
                 </li>
             </xpath>
         </template>
 
         <template id="message.dashboard" name="Message Dashboard" page="True">
-            <t t-call="dashboard.index">
+            <t t-call="dashboard.abstract">
                 <t t-set="page_title">院内消息</t>
                 <t t-set="breadcrumb">
                     <li>
@@ -30,7 +29,7 @@
         </template>
 
         <template id="message.dashboard_detail" name="Message Dashboard Detail" page="True">
-            <t t-call="dashboard.index">
+            <t t-call="dashboard.abstract">
                 <t t-set="page_title" t-value="message.name"/>
                 <t t-set="breadcrumb">
                     <li>
