@@ -12,6 +12,7 @@ UPDIS Project Module.""",
     'data': [
         'views/dashboard_menu.xml',
         'views/dashboard_template.xml',
+        'views/snippets.xml',
     ],
     'application': True,
 }

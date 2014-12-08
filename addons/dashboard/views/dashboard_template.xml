@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <template id="edit_bottom" inherit_id="website.layout" name="Inherit website" >
+        <template id="edit_bottom" inherit_id="website.layout" name="Inherit website">
             <xpath expr='//t[@t-call-assets="website.assets_frontend"][@t-css]' position="after">
-                 <t t-raw="bottom or ''" name='layout_bottom'/>
+                <t t-raw="bottom or ''" name='layout_bottom'/>
             </xpath>
         </template>
 
@@ -11,7 +11,7 @@
 
         </template>
 
-        <template id="dashboard.assets_frontend" name="Website assets">
+        <template id="dashboard.assets_frontend" name="Dashboard Assets">
             <link href="/dashboard/static/src/css/style.css" rel="stylesheet" type="text/css"/>
             <!--<link href="/dashboard/static/src/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
             <!--<link href="/dashboard/static/src/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>-->
@@ -47,7 +47,7 @@
             <!-- END JAVASCRIPTS -->
         </template>
 
-        <template id="dashboard.index" name="Dashboard Index">
+        <template id="dashboard.abstract" name="Dashboard Abstract">
             <t t-call="website.layout">
                 <t t-set="head">
                     <t t-call-assets="dashboard.assets_frontend" t-js="false"/>
@@ -77,6 +77,13 @@
                                     </div>
                                 </form>
                                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                            </li>
+                            <li class="start active homepage">
+                                <a href="/dashboard/index">
+                                    <i class="icon-home"></i>
+                                    <span class="title">首页</span>
+                                    <span class="selected"></span>
+                                </a>
                             </li>
                             <t t-call="dashboard.sidebar"/>
                         </ul>
@@ -113,9 +120,7 @@
                                     <!-- END PAGE TITLE & BREADCRUMB-->
                                 </div>
                             </div>
-                            <div id="dashboard">
-                                <t t-raw="page_container"/>
-                            </div>
+                            <t t-raw="page_container"/>
                         </div>
                         <!-- END PAGE CONTAINER-->
                     </div>
@@ -124,7 +129,21 @@
                 <!-- END CONTAINER -->
             </t>
         </template>
-
+        <template id="dashboard.index" name="Dashboard Index" page="True">
+            <t t-call="dashboard.abstract">
+                <t t-set="page_title">首页</t>
+                <t t-set="breadcrumb">
+                    <li>
+                        <i class="icon-home"></i>
+                        <a t-attf-href="/dashboard/index">首页</a>
+                        <!--<i class="icon-angle-right"></i>-->
+                    </li>
+                </t>
+                <t t-set="page_container">
+                    <div class="oe_structure"/>
+                </t>
+            </t>
+        </template>
 
     </data>
 </openerp>

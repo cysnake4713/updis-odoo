@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="dashboard.snippets" inherit_id="website.snippets" name="Dashboard Snippets">
+            <xpath expr="//ul[@class='nav navbar-nav nav-tabs']" position="inside">
+                <li>
+                    <a href="#dashboard_message" data-toggle="tab">信息</a>
+                </li>
+            </xpath>
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="dashboard_message" class="tab-pane">
+                    <div>
+                        <div class="oe_snippet_thumbnail">
+                            <img class="oe_snippet_thumbnail_img" src="/website/static/src/img/blocks/block_three_columns.png"/>
+                            <span class="oe_snippet_thumbnail_title">三列</span>
+                        </div>
+
+                        <section class="oe_snippet_body mt16 mb16">
+                            <div class="row">
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                    <!-- BEGIN Portlet PORTLET-->
+                                    <div class="portlet box red">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="icon-reorder"></i>
+                                            </div>
+                                            <div class="actions">
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body">
+                                            <div class="scroller" data-height="200px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Portlet PORTLET-->
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                    <!-- BEGIN Portlet PORTLET-->
+                                    <div class="portlet box grey">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="icon-reorder"></i>
+                                            </div>
+                                            <div class="actions">
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body">
+                                            <div class="scroller" data-height="200px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Portlet PORTLET-->
+                                </div>
+                                <div class="col-md-4 common-list-holder" data-model="" data-domain="" data-field="" data-limit="" data-order="">
+                                    <!-- BEGIN Portlet PORTLET-->
+                                    <div class="portlet box blue">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="icon-reorder"></i>
+                                            </div>
+                                            <div class="actions">
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body">
+                                            <div class="scroller" data-height="200px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Portlet PORTLET-->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="assets_frontend_inherit" inherit_id="dashboard.assets_frontend" name="Website assets">
+            <xpath expr="." position="inside">
+                <script src="/dashboard/static/src/js/dashboard.js" type="text/javascript"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>
